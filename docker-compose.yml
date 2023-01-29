@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  sample-restfull-api:
+    container_name: sample-restfull-api
+    image: sample-restfull:0.0.1
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_USERNAME: sample
+      DATABASE_PASSWORD: sample
+      DATABASE_URL: jdbc:postgresql://sample-api:5432/sample-api
+  sample-api:
+    container_name: "sample-api"
+    image: postgres:12-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: sample
+      POSTGRES_USER: sample
+      POSTGRES_DB: sample-api

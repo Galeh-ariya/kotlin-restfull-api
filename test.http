@@ -1,0 +1,73 @@
+### Insert True
+POST http://localhost:8080/api/mhs
+X-Api-Key: XXX
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nim": 3130021006,
+  "name": "Yulian",
+  "email": "3130021006@student.unusa.ac.id",
+  "prodi": "Sistem Informasi"
+}
+
+
+### Insert False
+POST http://localhost:8080/api/mhs
+Content-Type: application/json
+Accept: application/json
+
+{
+"nim": 0,
+"name": "",
+"email": "3130021001@student.unusa.ac.id",
+"prodi": "Sistem Informasi"
+}
+
+
+### Get True
+GET http://localhost:8080/api/mhs/3130021001
+Accept: application/json
+
+### Get False
+GET http://localhost:8080/api/mhs/3130021002
+Accept: application/json
+
+### Update True
+PUT http://localhost:8080/api/mhs/3130021006
+X-Api-Key: XXX
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Yuliana",
+  "email": "3130021006@student.unusa.ac.id",
+  "prodi": "Sistem Informasi"
+}
+
+### Update False
+PUT http://localhost:8080/api/mhs/3130021001
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "",
+  "email": "3130021001@student.unusa.ac.id",
+  "prodi": "S1 Sistem Informasi"
+}
+
+### Delete True
+DELETE http://localhost:8080/api/mhs/3130021001
+Accept: application/json
+
+### Delete False
+DELETE http://localhost:8080/api/mhs/3130021001
+Accept: application/json
+
+### Get All True
+GET http://localhost:8080/api/mhs
+Accept: application/json
+
+### Get All True 3 Data
+GET http://localhost:8080/api/mhs?size=3
+Accept: application/json
