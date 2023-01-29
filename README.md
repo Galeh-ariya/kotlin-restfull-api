@@ -129,7 +129,7 @@ Request :
 ## DELETE Mahasiswa
 Request :
 - Method : DELETE
-- Endpoint : `api/mhs/{niMhs}`
+- Endpoint : `api/mhs/{nimMhs}`
 - Header :
     - Accept: application/json
 
